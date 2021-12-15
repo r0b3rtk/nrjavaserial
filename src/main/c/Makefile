@@ -64,6 +64,7 @@ include platform.mk
 export CFLAGS ?= -I$(JAVA_HOME)/include -I./include -I./include/target \
                    -O3 -fPIC -c \
                    -Wall
+                   -DDISABLE_LOCKFILES
 # We want to use the compiler frontend to invoke the linker, too.
 export LD = $(CC)
 # We want to link objects into a shared library.
