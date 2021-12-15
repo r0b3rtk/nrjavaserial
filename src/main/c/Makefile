@@ -63,7 +63,7 @@ include platform.mk
 # it will work as a library (dlopen(3) et al. can load it into any memory).
 export CFLAGS ?= -I$(JAVA_HOME)/include -I./include -I./include/target \
                    -O3 -fPIC -c \
-                   -Wall
+                   -Wall \
                    -DDISABLE_LOCKFILES
 # We want to use the compiler frontend to invoke the linker, too.
 export LD = $(CC)
